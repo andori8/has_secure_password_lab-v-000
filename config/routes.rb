@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#hello'
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
+  post '/login' => 'sessions#create', as: 'session'
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
